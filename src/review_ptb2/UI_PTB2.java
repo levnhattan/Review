@@ -147,7 +147,7 @@ public class UI_PTB2 extends javax.swing.JFrame {
         double a  = Double.parseDouble(txt1.getText());
         double b  = Double.parseDouble(txt2.getText());
         double c  = Double.parseDouble(txt3.getText());
-        int denta=  (int) (b*b - 4*a*c);
+        double denta=  (b*b - 4*a*c);
         if(a ==0 ){
             if(b==0){
                 kq.setText("pt vo nghiem");
