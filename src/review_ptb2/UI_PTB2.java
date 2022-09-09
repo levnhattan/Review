@@ -29,9 +29,9 @@ public class UI_PTB2 extends javax.swing.JFrame {
         lblb = new javax.swing.JLabel();
         lbla = new javax.swing.JLabel();
         lblc = new javax.swing.JLabel();
-        txt2 = new javax.swing.JTextField();
-        txt1 = new javax.swing.JTextField();
-        txt3 = new javax.swing.JTextField();
+        txtB = new javax.swing.JTextField();
+        txtA = new javax.swing.JTextField();
+        txtC = new javax.swing.JTextField();
         lamlai = new javax.swing.JButton();
         giai = new javax.swing.JButton();
         kq = new javax.swing.JLabel();
@@ -43,6 +43,12 @@ public class UI_PTB2 extends javax.swing.JFrame {
         lbla.setText("Nhap a:");
 
         lblc.setText("Nhap c:");
+
+        txtB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtBActionPerformed(evt);
+            }
+        });
 
         lamlai.setText("Lam lai");
         lamlai.addActionListener(new java.awt.event.ActionListener() {
@@ -77,8 +83,8 @@ public class UI_PTB2 extends javax.swing.JFrame {
                             .addComponent(lblc))
                         .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtC, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(57, 57, 57)
                         .addComponent(kq)))
@@ -91,7 +97,7 @@ public class UI_PTB2 extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(175, Short.MAX_VALUE)
-                    .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(114, 114, 114)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -105,11 +111,11 @@ public class UI_PTB2 extends javax.swing.JFrame {
                 .addGap(65, 65, 65)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblb)
-                    .addComponent(txt2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblc)
-                    .addComponent(txt3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
                 .addComponent(lamlai)
                 .addGap(18, 18, 18)
@@ -123,7 +129,7 @@ public class UI_PTB2 extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(38, 38, 38)
-                    .addComponent(txt1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(240, Short.MAX_VALUE)))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -137,16 +143,16 @@ public class UI_PTB2 extends javax.swing.JFrame {
 
     private void lamlaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lamlaiActionPerformed
         // TODO add your handling code here:
-        txt2.setText("");
-        txt1.setText("");
-        txt3.setText("");
+        txtB.setText("");
+        txtA.setText("");
+        txtC.setText("");
     }//GEN-LAST:event_lamlaiActionPerformed
 
     private void giaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_giaiActionPerformed
         // TODO add your handling code here:
-        double a  = Double.parseDouble(txt1.getText());
-        double b  = Double.parseDouble(txt2.getText());
-        double c  = Double.parseDouble(txt3.getText());
+        double a  = Double.parseDouble(txtA.getText());
+        double b  = Double.parseDouble(txtB.getText());
+        double c  = Double.parseDouble(txtC.getText());
         int denta=  (int) (b*b - 4*a*c);
         if(a ==0 ){
             if(b==0){
@@ -164,6 +170,10 @@ public class UI_PTB2 extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_giaiActionPerformed
+
+    private void txtBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,8 +217,8 @@ public class UI_PTB2 extends javax.swing.JFrame {
     private javax.swing.JLabel lbla;
     private javax.swing.JLabel lblb;
     private javax.swing.JLabel lblc;
-    private javax.swing.JTextField txt1;
-    private javax.swing.JTextField txt2;
-    private javax.swing.JTextField txt3;
+    private javax.swing.JTextField txtA;
+    private javax.swing.JTextField txtB;
+    private javax.swing.JTextField txtC;
     // End of variables declaration//GEN-END:variables
 }
