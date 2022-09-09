@@ -25,13 +25,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="lamlai" min="-2" max="-2" attributes="0"/>
+              <Component id="btnLamlai" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="kq" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="lblb" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="lblc" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -41,10 +42,6 @@
                           <Component id="txtC" min="-2" pref="111" max="-2" attributes="0"/>
                           <Component id="txtB" min="-2" pref="111" max="-2" attributes="0"/>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>
-                      <Component id="kq" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="119" max="32767" attributes="0"/>
@@ -66,7 +63,7 @@
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
-                  <Component id="giai" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnGiai" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="277" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -86,7 +83,7 @@
                   <Component id="txtC" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
-              <Component id="lamlai" min="-2" max="-2" attributes="0"/>
+              <Component id="btnLamlai" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="kq" min="-2" max="-2" attributes="0"/>
               <EmptySpace pref="72" max="32767" attributes="0"/>
@@ -108,7 +105,7 @@
           <Group type="103" rootIndex="3" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="170" max="32767" attributes="0"/>
-                  <Component id="giai" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnGiai" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -140,25 +137,25 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtC">
     </Component>
-    <Component class="javax.swing.JButton" name="lamlai">
+    <Component class="javax.swing.JButton" name="btnLamlai">
       <Properties>
         <Property name="text" type="java.lang.String" value="Lam lai"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="lamlaiActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLamlaiActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="giai">
+    <Component class="javax.swing.JButton" name="btnGiai">
       <Properties>
         <Property name="text" type="java.lang.String" value="Giai"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="giaiActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGiaiActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="kq">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ket quA: "/>
+        <Property name="text" type="java.lang.String" value="Ket Qua: "/>
       </Properties>
     </Component>
   </SubComponents>

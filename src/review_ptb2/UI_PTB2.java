@@ -15,6 +15,7 @@ public class UI_PTB2 extends javax.swing.JFrame {
      */
     public UI_PTB2() {
         initComponents();
+        setTitle("Giai PTB2");
     }
 
     /**
@@ -32,8 +33,8 @@ public class UI_PTB2 extends javax.swing.JFrame {
         txtB = new javax.swing.JTextField();
         txtA = new javax.swing.JTextField();
         txtC = new javax.swing.JTextField();
-        lamlai = new javax.swing.JButton();
-        giai = new javax.swing.JButton();
+        btnLamlai = new javax.swing.JButton();
+        btnGiai = new javax.swing.JButton();
         kq = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,21 +51,21 @@ public class UI_PTB2 extends javax.swing.JFrame {
             }
         });
 
-        lamlai.setText("Lam lai");
-        lamlai.addActionListener(new java.awt.event.ActionListener() {
+        btnLamlai.setText("Lam lai");
+        btnLamlai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lamlaiActionPerformed(evt);
+                btnLamlaiActionPerformed(evt);
             }
         });
 
-        giai.setText("Giai");
-        giai.addActionListener(new java.awt.event.ActionListener() {
+        btnGiai.setText("Giai");
+        btnGiai.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                giaiActionPerformed(evt);
+                btnGiaiActionPerformed(evt);
             }
         });
 
-        kq.setText("Ket quA: ");
+        kq.setText("Ket Qua: ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,22 +73,20 @@ public class UI_PTB2 extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lamlai)
+                .addComponent(btnLamlai)
                 .addGap(132, 132, 132))
             .addGroup(layout.createSequentialGroup()
+                .addGap(67, 67, 67)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(kq)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblb)
                             .addComponent(lblc))
                         .addGap(61, 61, 61)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtC, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addComponent(kq)))
+                            .addComponent(txtB, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(119, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -102,7 +101,7 @@ public class UI_PTB2 extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(51, 51, 51)
-                    .addComponent(giai)
+                    .addComponent(btnGiai)
                     .addContainerGap(277, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -117,7 +116,7 @@ public class UI_PTB2 extends javax.swing.JFrame {
                     .addComponent(lblc)
                     .addComponent(txtC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
-                .addComponent(lamlai)
+                .addComponent(btnLamlai)
                 .addGap(18, 18, 18)
                 .addComponent(kq)
                 .addContainerGap(72, Short.MAX_VALUE))
@@ -134,26 +133,26 @@ public class UI_PTB2 extends javax.swing.JFrame {
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                     .addContainerGap(170, Short.MAX_VALUE)
-                    .addComponent(giai)
+                    .addComponent(btnGiai)
                     .addGap(108, 108, 108)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lamlaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lamlaiActionPerformed
+    private void btnLamlaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLamlaiActionPerformed
         // TODO add your handling code here:
         txtB.setText("");
         txtA.setText("");
         txtC.setText("");
-    }//GEN-LAST:event_lamlaiActionPerformed
+    }//GEN-LAST:event_btnLamlaiActionPerformed
 
-    private void giaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_giaiActionPerformed
+    private void btnGiaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGiaiActionPerformed
         // TODO add your handling code here:
         double a  = Double.parseDouble(txtA.getText());
         double b  = Double.parseDouble(txtB.getText());
         double c  = Double.parseDouble(txtC.getText());
-        int denta=  (int) (b*b - 4*a*c);
+        double delta=  (b*b - 4*a*c);
         if(a ==0 ){
             if(b==0){
                 kq.setText("pt vo nghiem");
@@ -161,15 +160,15 @@ public class UI_PTB2 extends javax.swing.JFrame {
                 kq.setText("pt co nghiem: " + (-c/b));
             }
         }else{
-            if(denta > 0)
-                kq.setText("pt co 2 nghiem: " + "x1= " + (-b + Math.sqrt(denta)/ (2*a))+ "\n" + "x2= " +  (-b - Math.sqrt(denta)/ (2*a)));
-            else if(denta == 0)
+            if(delta > 0)
+                kq.setText("pt co 2 nghiem: " + "x1= " + (-b + Math.sqrt(delta)/ (2*a))+ "\n" + "x2= " +  (-b - Math.sqrt(delta)/ (2*a)));
+            else if(delta == 0)
                 kq.setText("pt co nghiem kep x1= x2= " + (-b/2*a));
             else
                 kq.setText("pt vo nghiem");
         }
         
-    }//GEN-LAST:event_giaiActionPerformed
+    }//GEN-LAST:event_btnGiaiActionPerformed
 
     private void txtBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBActionPerformed
         // TODO add your handling code here:
@@ -211,9 +210,9 @@ public class UI_PTB2 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton giai;
+    private javax.swing.JButton btnGiai;
+    private javax.swing.JButton btnLamlai;
     private javax.swing.JLabel kq;
-    private javax.swing.JButton lamlai;
     private javax.swing.JLabel lbla;
     private javax.swing.JLabel lblb;
     private javax.swing.JLabel lblc;
